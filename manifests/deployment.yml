@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hannhowpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hannhowpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hannhowpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hannhowpipelinesjavascriptdocker 
+          image: hhancr.azurecr.io/hannhowpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
